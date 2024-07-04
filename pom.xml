@@ -21,7 +21,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>Driver</mainClass>
+                            <mainClass>org.example.Driver</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
