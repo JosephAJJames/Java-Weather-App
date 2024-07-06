@@ -7,8 +7,9 @@ public class WeatherApp {
     private CityCoordinatesFetcher cityFetcher;
 
     private int round;
-    public WeatherApp(WeatherInfoFetcher myFetcher) {
+    public WeatherApp(WeatherInfoFetcher myFetcher, CityCoordinatesFetcher myCityFetcher) {
         this.fetcher = myFetcher;
+        this.cityFetcher = myCityFetcher
     }
 
     public void run() {
@@ -48,7 +49,7 @@ public class WeatherApp {
     }
 
     public void processSecondRoundOptions(String city) {
-        
+
     }
 
     public void processFirstRound() {
