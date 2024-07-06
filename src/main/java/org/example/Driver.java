@@ -4,5 +4,7 @@ public class Driver {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
         WeatherInfoFetcher weatherFetcher = new WeatherInfoFetcher();
+        WeatherApp myApp = new WeatherApp(weatherFetcher);
+        myApp.run();
     }
 }
