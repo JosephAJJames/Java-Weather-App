@@ -9,6 +9,6 @@ public class WeatherInfoFetcher {
     private String apiKey;
 
     public WeatherInfoFetcher(String apiKey) {
-        this.apiKey = apiKey
+        this.apiKey = apiKey;
     }
 }

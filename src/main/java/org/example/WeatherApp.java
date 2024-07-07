@@ -9,7 +9,7 @@ public class WeatherApp {
     private int round;
     public WeatherApp(WeatherInfoFetcher myFetcher, CityCoordinatesFetcher myCityFetcher) {
         this.fetcher = myFetcher;
-        this.cityFetcher = myCityFetcher
+        this.cityFetcher = myCityFetcher;
     }
 
     public void run() {
