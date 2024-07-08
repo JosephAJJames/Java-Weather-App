@@ -16,4 +16,10 @@ public class TupleOfDouble {
     public double getSecond() {
         return this.second;
     }
+
+    public void print() {
+        System.out.print(this.first);
+        System.out.print(", " + this.second);
+        System.out.println("");
+    }
 }

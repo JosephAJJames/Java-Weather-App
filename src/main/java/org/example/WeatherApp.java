@@ -19,6 +19,7 @@ public class WeatherApp {
             this.processFirstRound();
             this.setRound(2);
             this.printSecondRoundOption();
+            this.processSecondRound();
         }
     }
 
@@ -49,7 +50,7 @@ public class WeatherApp {
     }
 
     public void processSecondRoundOptions(String city) {
-
+        this.fetcher.makeRequest(city);
     }
 
     public void processFirstRound() {
@@ -61,5 +62,6 @@ public class WeatherApp {
     public void processSecondRound() {
         Scanner myScanner = new Scanner(System.in);
         String result = myScanner.next();
+        this.processSecondRoundOptions(result);
     }
 }

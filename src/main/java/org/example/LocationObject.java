@@ -10,7 +10,6 @@ public class LocationObject {
     private String country;
     private String state;
 
-    // Getters and setters
     public String getName() {
         return name;
     }
