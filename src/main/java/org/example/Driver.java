@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.model.*;
+
 import io.github.cdimascio.dotenv.Dotenv;
 
 public class Driver {
@@ -9,7 +11,8 @@ public class Driver {
         System.out.println(APIKey);
         WeatherInfoFetcher weatherFetcher = new WeatherInfoFetcher(APIKey);
         CityCoordinatesFetcher cityCoordsFetcher = new CityCoordinatesFetcher(APIKey);
-        WeatherApp myApp = new WeatherApp(weatherFetcher, cityCoordsFetcher);
+        KelvinToCelsius convertor = new KelvinToCelsius();
+        WeatherApp myApp = new WeatherApp(weatherFetcher, cityCoordsFetcher, convertor);
         myApp.run();
     }
 }
