@@ -3,6 +3,7 @@ package org.example.controller;
 import org.example.view.MainView;
 import org.jxmapviewer.JXMapViewer;
 import org.jxmapviewer.input.PanMouseInputListener;
+import org.jxmapviewer.input.ZoomMouseWheelListenerCenter;
 
 import javax.swing.event.MouseInputListener;
 import java.awt.*;
@@ -24,5 +25,6 @@ public class MainController {
         MouseInputListener mouseInputListener = new PanMouseInputListener(map);
         map.addMouseListener(mouseInputListener);
         map.addMouseMotionListener(mouseInputListener);
+        map.addMouseWheelListener(new ZoomMouseWheelListenerCenter(map));
     }
 }
