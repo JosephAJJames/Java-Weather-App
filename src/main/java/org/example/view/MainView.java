@@ -2,16 +2,16 @@ package org.example.view;
 
 import javax.swing.*;
 import org.jxmapviewer.*;
-import org.jxmapviewer.viewer.DefaultTileFactory;
-import org.jxmapviewer.viewer.GeoPosition;
-import org.jxmapviewer.viewer.TileFactory;
-import org.jxmapviewer.viewer.TileFactoryInfo;
+import org.jxmapviewer.viewer.*;
 
+import java.util.ArrayList;
 import java.awt.*;
 
 
 public class MainView extends JFrame {
     private JXMapViewer map = new JXMapViewer();
+    private DefaultWaypoint currentWayPoint;
+
 
     public MainView() {
         setSize(800, 800);
@@ -36,5 +36,13 @@ public class MainView extends JFrame {
 
     public void setMap(JXMapViewer map) {
         this.map = map;
+    }
+
+    public DefaultWaypoint getCurrentWayPoint() {
+        return this.currentWayPoint;
+    }
+
+    public void setCurrentWayPoint(DefaultWaypoint wayPoint) {
+        this.currentWayPoint = wayPoint;
     }
 }
