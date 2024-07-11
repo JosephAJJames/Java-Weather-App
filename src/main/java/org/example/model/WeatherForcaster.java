@@ -38,7 +38,7 @@ public class WeatherForcaster implements Observer{
 
 
     public void makeNewPanel(GeoPosition pos, String desc, int temp) {
-        this.controller.getMainView().showWeatherPanel(pos, desc, temp);
+        this.controller.getMainView().showWeatherPanel(pos, desc, this.tempConvertor.convert(temp));
     }
 
 

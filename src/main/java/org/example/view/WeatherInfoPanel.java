@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class WeatherInfoPanel extends JPanel {
-    JLabel infoLabel;
+    JLabel infoLabel = new JLabel();
     private JButton closeButton;
     private String infomartion;
 
@@ -23,5 +23,6 @@ public class WeatherInfoPanel extends JPanel {
 
     public void setWeatherDescription(String format) {
         this.infomartion = format;
+        infoLabel.setText(format);
     }
 }
