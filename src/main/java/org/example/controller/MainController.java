@@ -2,6 +2,7 @@ package org.example.controller;
 
 import org.example.model.WeatherObject;
 import org.example.view.MainView;
+import org.example.view.WeatherInfoPanel;
 import org.jxmapviewer.JXMapViewer;
 import org.jxmapviewer.input.PanMouseInputListener;
 import org.jxmapviewer.input.ZoomMouseWheelListenerCenter;
@@ -47,6 +48,14 @@ public class MainController extends AbstractSubject {
         map.addMouseWheelListener(new ZoomMouseWheelListenerCenter(map));
 
         map.addMouseListener(new MapClickListener());
+    }
+
+    public void setInfoPanel(WeatherInfoPanel panel) {
+        this.mainView.setWhiteBoxPanel(panel);
+    }
+
+    public MainView getMainView() {
+        return this.mainView;
     }
 
     private class MapClickListener extends MouseAdapter {
