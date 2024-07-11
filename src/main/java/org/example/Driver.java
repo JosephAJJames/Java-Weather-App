@@ -21,6 +21,5 @@ public class Driver {
         CityCoordinatesFetcher cityCoordsFetcher = new CityCoordinatesFetcher(APIKey);
         KelvinToCelsius convertor = new KelvinToCelsius();
         WeatherForcaster myApp = new WeatherForcaster(weatherFetcher, cityCoordsFetcher, convertor, controller);
-        myApp.run();
     }
 }
